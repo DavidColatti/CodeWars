@@ -16,14 +16,16 @@ XO("zzoo") => false */
 function XO(str) {
     let xLetter = 0;
     let oLetter = 0;
-    
-    for (let i = 0; i < str.length; i++)
-      if (str[i] === 'x' || str[i] === 'X') {
-        xLetter++;
-      } else if (str[i] === 'o' || str[i] === 'O') {
-        oLetter++;
-      }
+
+    for (let letter of str) {
+        if (letter === 'x' || letter === 'X') {
+            xLetter++;
+        } else if (letter === 'o' || letter === 'O') {
+            oLetter++;
+        }
+    }
+
     return xLetter === oLetter;
-  }
+}
   
   
