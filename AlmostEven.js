@@ -1,4 +1,4 @@
-// Almost Eveb
+// Almost Even
 
 /* Link: https://www.codewars.com/kata/529e2e1f16cb0fcccb000a6b/train/javascript
 Instruction: 
@@ -10,13 +10,12 @@ splitInteger(20, 6)  // returns [3, 3, 3, 3, 4, 4]
 Complete the function so that it returns an array of integer representing the parts. Ignoring the order of the parts, there is only one valid solution for each input to your function! */
 
 let splitInteger = (num, parts) => {
-  let array = []
-  for(let i = 0; i < parts; i++) {
-    array[i] = Math.floor(num / parts) + (i < num % parts)
-  }
-  return array
-}
-
+	let array = [];
+	for (let i = 0; i < parts; i++) {
+		array[i] = Math.floor(num / parts) + (i < num % parts);
+	}
+	return array;
+};
 
 // OTHER SOLUTION:
 
@@ -26,7 +25,7 @@ let splitInteger = (num, parts) => {
 //   let amtOfTimes1 = parts - (num % num1)
 //   let amtOfTimes2 = parts - amtOfTimes1
 //   let num2 = (num - (num1*amtOfTimes1)) / amtOfTimes2
-  
+
 //   while(array.length < amtOfTimes1) {
 //     array.push(num1)
 //   }
